@@ -1,0 +1,93 @@
+#Variable Declarations
+magic_number::int = 5;                 #Declaring an integer
+magic_words::string = "Hello, World!"; #Declaring a string
+magic_circle_radius::float = 3.14;     #Declaring a float
+truth_spell::bool = true;              #Declaring a boolean
+spell_components::list = [1, 2, 3, 4, 5]; #Declaring a list
+spellbook::dict = {"key1": 1, "key2": 2, "key3": 3}; #Declaring a dictionary
+
+#Conditional Statements
+[?
+if magic_number > magic_circle_radius ? {
+    echo("magic_number is greater than magic_circle_radius");
+} otherwise! {
+    echo("magic_number is not greater than magic_circle_radius");
+}
+!]
+[?
+if magic_words == "Hello, World!" ? {
+    echo("magic_words is equal to Hello, World!");
+} otherwise! {
+    echo("magic_words is not equal to Hello, World!");
+}
+!]
+[?
+if truth_spell ? {
+    echo("truth_spell is true");
+} otherwise! {
+    echo("truth_spell is false");
+}
+!]
+[?
+if spell_components[0] == 1 ? {
+    echo("spell_components[0] is equal to 1");
+} otherwise! {
+    echo("spell_components[0] is not equal to 1");
+}
+!][?
+if spellbook["key1"] == 1 ? {
+    echo("spellbook[\"key1\"] is equal to 1");
+} otherwise! {
+    echo("spellbook[\"key1\"] is not equal to 1");
+}
+!]
+[?
+#Loops
+journey item through spell_components {
+    echo(item);
+}
+!][?
+quest key, value through spellbook {
+    echo(key, value);
+}
+!][?
+while magic_number > 0 {
+    magic_number = magic_number - 1;
+    echo(magic_number);
+}
+!][?
+#Function Definition
+summon int combinePowers(a::int, b::int) {
+    bestow a + b;  #Returns the sum of a and b
+}
+!][?
+#Struct Definition
+struct apprentice {
+    id::int;
+    gpa::float;
+}
+!][?
+echo(combinePowers(1, 2));  #Function call
+!][?
+#More Complex Function
+summon float evaluateApprenticeGPA(apprenticeID::int) {
+    #Assuming a function to fetch an apprentices GPA
+    bestow apprentice.fetchGPA(apprenticeID);
+}
+!][?
+if highestGPA(evaluateApprenticeGPA(apprenticeID))? {
+    echo("is the highest GPA");
+} otherwise! {
+    echo("good luck next time");
+}
+!][?
+#External Request Simulation
+crystalBallResponse::response = get("http://magicnet/google");
+!][?
+if crystalBallResponse.status == 200? {
+    echo("Crystal Ball connected to the magic net successfully");
+} otherwise_if! crystalBallResponse.status == 404 {
+    echo("The spell could not find the desired page on the magic net");
+} otherwise! {
+    echo(crystalBallResponse.status);
+}!]
